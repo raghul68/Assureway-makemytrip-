@@ -1,0 +1,869 @@
+2026-03-19 17:11:17  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:11:17  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:11:17  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:11:25  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:11:25  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:11:26  [INFO    ]  tests.test_bus_search — TC_BUS_001: Valid bus search from config
+2026-03-19 17:11:26  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:11:26  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:11:46  [INFO    ]  pages.home_page — No login popup detected — continuing.
+2026-03-19 17:11:46  [INFO    ]  pages.home_page — Clicking Buses tab
+2026-03-19 17:12:17  [WARNING ]  pages.home_page — Primary tab locator failed; trying fallback.
+2026-03-19 17:12:48  [ERROR   ]  pages.home_page — Both tab locators failed: Message: Element not clickable: ('css selector', "li[data-cy='menu_Buses']")
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xa17c13+10dd3]
+	chromedriver!GetHandleVerifier [0xa17d44+10f04]
+	chromedriver!(No symbol) [0x7f1f50]
+	chromedriver!(No symbol) [0x83a9aa]
+	chromedriver!(No symbol) [0x83ac4b]
+	chromedriver!(No symbol) [0x87cee2]
+	chromedriver!(No symbol) [0x85d954]
+	chromedriver!(No symbol) [0x87a7de]
+	chromedriver!(No symbol) [0x85d6a6]
+	chromedriver!(No symbol) [0x830029]
+	chromedriver!(No symbol) [0x830de4]
+	chromedriver!GetHandleVerifier [0xc74509+26d6c9]
+	chromedriver!GetHandleVerifier [0xc6fb43+268d03]
+	chromedriver!GetHandleVerifier [0xc8d85b+286a1b]
+	chromedriver!GetHandleVerifier [0xa31668+2a828]
+	chromedriver!GetHandleVerifier [0xa397fd+329bd]
+	chromedriver!GetHandleVerifier [0xa20588+19748]
+	chromedriver!GetHandleVerifier [0xa20752+19912]
+	chromedriver!GetHandleVerifier [0xa099da+2b9a]
+	KERNEL32!BaseThreadInitThunk [0x761f5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7722d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7722d7c1+231]
+
+2026-03-19 17:12:48  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_valid_bus_search_from_config_20260319_171248.png
+2026-03-19 17:12:48  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:12:51  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:12:51  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:12:51  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:12:51  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:12:59  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:12:59  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:13:00  [INFO    ]  tests.test_flight_search — TC_FLIGHT_001: Valid flight search from config
+2026-03-19 17:13:00  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:13:01  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:13:21  [INFO    ]  pages.home_page — No login popup detected — continuing.
+2026-03-19 17:13:21  [INFO    ]  pages.home_page — Clicking Flights tab
+2026-03-19 17:13:52  [WARNING ]  pages.home_page — Primary tab locator failed; trying fallback.
+2026-03-19 17:14:09  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:14:25  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:14:52  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:14:52  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:14:52  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:15:00  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:15:00  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:15:01  [INFO    ]  tests.test_bus_search — TC_BUS_001: Valid bus search from config
+2026-03-19 17:15:01  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:15:01  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:15:21  [INFO    ]  pages.home_page — Click dismissal failed or not needed; trying ESC key fallback.
+2026-03-19 17:15:32  [INFO    ]  pages.home_page — Clicking Buses tab
+2026-03-19 17:16:34  [WARNING ]  pages.home_page — Standard tab clicks failed; using JS click as last resort.
+2026-03-19 17:17:06  [ERROR   ]  pages.home_page — All tab click strategies failed: Message: Element not found: ('xpath', "//li[@data-cy='menu_Buses'] | //a[contains(@class,'appendLeft20')][.//span[contains(text(),'Bus')]]")
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xa17c13+10dd3]
+	chromedriver!GetHandleVerifier [0xa17d44+10f04]
+	chromedriver!(No symbol) [0x7f1f50]
+	chromedriver!(No symbol) [0x83a9aa]
+	chromedriver!(No symbol) [0x83ac4b]
+	chromedriver!(No symbol) [0x87cee2]
+	chromedriver!(No symbol) [0x85d954]
+	chromedriver!(No symbol) [0x87a7de]
+	chromedriver!(No symbol) [0x85d6a6]
+	chromedriver!(No symbol) [0x830029]
+	chromedriver!(No symbol) [0x830de4]
+	chromedriver!GetHandleVerifier [0xc74509+26d6c9]
+	chromedriver!GetHandleVerifier [0xc6fb43+268d03]
+	chromedriver!GetHandleVerifier [0xc8d85b+286a1b]
+	chromedriver!GetHandleVerifier [0xa31668+2a828]
+	chromedriver!GetHandleVerifier [0xa397fd+329bd]
+	chromedriver!GetHandleVerifier [0xa20588+19748]
+	chromedriver!GetHandleVerifier [0xa20752+19912]
+	chromedriver!GetHandleVerifier [0xa099da+2b9a]
+	KERNEL32!BaseThreadInitThunk [0x761f5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7722d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7722d7c1+231]
+
+2026-03-19 17:17:06  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_valid_bus_search_from_config_20260319_171706.png
+2026-03-19 17:17:06  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:17:08  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:17:08  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:17:08  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:17:08  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:17:16  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:17:16  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:17:16  [INFO    ]  tests.test_flight_search — TC_FLIGHT_001: Valid flight search from config
+2026-03-19 17:17:16  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:17:16  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:17:35  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:17:51  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:18:11  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:18:11  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:18:11  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:18:11  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:18:19  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:18:19  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:18:19  [INFO    ]  tests.test_flight_search — TC_FLIGHT_001: Valid flight search from config
+2026-03-19 17:18:19  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:18:23  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:18:24  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:18:35  [INFO    ]  pages.home_page — Clicking Flights tab
+2026-03-19 17:18:40  [INFO    ]  pages.flight_search_page — === Starting Flight Search ===
+2026-03-19 17:18:40  [INFO    ]  pages.flight_search_page — Route: Delhi → Mumbai | Date: 26 Mar 2026
+2026-03-19 17:18:40  [INFO    ]  pages.flight_search_page — Entering FROM city: Delhi
+2026-03-19 17:18:44  [INFO    ]  pages.flight_search_page — Selecting suggestion for 'Delhi'
+2026-03-19 17:18:45  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_valid_flight_search_from_config_20260319_171845.png
+2026-03-19 17:18:45  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:18:46  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:20:08  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:20:08  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:20:08  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:20:08  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:20:14  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:20:14  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:20:19  [INFO    ]  tests.test_bus_search — TC_BUS_001: Valid bus search from config
+2026-03-19 17:20:19  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:20:20  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:20:22  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:20:32  [INFO    ]  pages.home_page — Clicking Bus tab
+2026-03-19 17:20:32  [INFO    ]  pages.bus_search_page — === Starting Bus Search ===
+2026-03-19 17:20:32  [INFO    ]  pages.bus_search_page — Route: Bangalore → Chennai | Date: 24 Mar 2026
+2026-03-19 17:20:32  [INFO    ]  pages.bus_search_page — Entering bus FROM city: Bangalore
+2026-03-19 17:20:43  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 17:20:54  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 17:20:55  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 17:20:55  [INFO    ]  pages.bus_search_page — Entering bus TO city: Chennai
+2026-03-19 17:21:15  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 17:21:26  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 17:21:27  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 17:21:27  [INFO    ]  pages.bus_search_page — Selecting travel date: 24 Mar 2026
+2026-03-19 17:21:28  [WARNING ]  BusSearchPage — Standard click intercepted, using JS click on ('css selector', "[data-cy='travelDate'], div.dateInput, div[class*='dateContainer']")
+2026-03-19 17:21:29  [WARNING ]  BusSearchPage — Standard click intercepted, using JS click on ('xpath', "//div[@aria-label='Tue Mar 24 2026' and not(contains(@class,'disabled'))] | //p[@aria-label='Tue Mar 24 2026']")
+2026-03-19 17:21:29  [INFO    ]  pages.bus_search_page — Picked travel date: Tue Mar 24 2026
+2026-03-19 17:21:29  [INFO    ]  pages.bus_search_page — Clicking Bus Search button
+2026-03-19 17:21:30  [WARNING ]  BusSearchPage — Standard click intercepted, using JS click on ('css selector', 'a.primaryBtn, button.primaryBtn')
+2026-03-19 17:21:39  [INFO    ]  pages.bus_search_page — Bus search submitted.
+2026-03-19 17:21:39  [INFO    ]  pages.bus_search_page — Verifying bus results are displayed…
+2026-03-19 17:21:59  [ERROR   ]  pages.bus_search_page — No bus results found.
+2026-03-19 17:22:00  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_valid_bus_search_from_config_20260319_172200.png
+2026-03-19 17:22:00  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:22:01  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:22:01  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:22:01  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:22:01  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:22:01  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:22:05  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:22:05  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:22:28  [INFO    ]  tests.test_flight_search — TC_FLIGHT_001: Valid flight search from config
+2026-03-19 17:22:28  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:22:30  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:22:31  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:22:44  [WARNING ]  conftest — Failed to save screenshot: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x11d7c13+10dd3]
+	chromedriver!GetHandleVerifier [0x11d7d44+10f04]
+	chromedriver!(No symbol) [0xfb1d8e]
+	chromedriver!(No symbol) [0xfef2b5]
+	chromedriver!(No symbol) [0x101d7c6]
+	chromedriver!(No symbol) [0x1018c41]
+	chromedriver!(No symbol) [0x1018262]
+	chromedriver!(No symbol) [0xf8517e]
+	chromedriver!(No symbol) [0xf8571e]
+	chromedriver!(No symbol) [0xf85bfd]
+	chromedriver!GetHandleVerifier [0x1434509+26d6c9]
+	chromedriver!GetHandleVerifier [0x142fb43+268d03]
+	chromedriver!GetHandleVerifier [0x144d85b+286a1b]
+	chromedriver!GetHandleVerifier [0x11f1668+2a828]
+	chromedriver!GetHandleVerifier [0x11f97fd+329bd]
+	chromedriver!(No symbol) [0xf84ee9]
+	chromedriver!(No symbol) [0xf84530]
+	chromedriver!GetHandleVerifier [0x157dc9f+3b6e5f]
+	KERNEL32!BaseThreadInitThunk [0x761f5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7722d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7722d7c1+231]
+
+2026-03-19 17:22:44  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:22:44  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:22:44  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:22:44  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:22:44  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:22:44  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:22:50  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:22:50  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:22:55  [INFO    ]  tests.test_hotel_search — TC_HOTEL_001: Valid hotel search from config
+2026-03-19 17:22:55  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:22:58  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:23:00  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:23:10  [INFO    ]  pages.home_page — Clicking Hotels tab
+2026-03-19 17:23:10  [INFO    ]  pages.hotel_search_page — === Starting Hotel Search ===
+2026-03-19 17:23:10  [INFO    ]  pages.hotel_search_page — City: Goa | Check-in: 26 Mar 2026 | Check-out: 28 Mar 2026 | Rooms: 1 | Adults: 2
+2026-03-19 17:23:10  [INFO    ]  pages.hotel_search_page — Entering hotel city: Goa
+2026-03-19 17:23:22  [INFO    ]  pages.hotel_search_page — City suggestion clicked for: Goa
+2026-03-19 17:23:22  [INFO    ]  pages.hotel_search_page — Selecting check-in date: 26 Mar 2026
+2026-03-19 17:25:04  [ERROR   ]  pages.hotel_search_page — Could not select date Thu Mar 26 2026
+2026-03-19 17:25:04  [INFO    ]  pages.hotel_search_page — Selecting check-out date: 28 Mar 2026
+2026-03-19 17:25:44  [WARNING ]  conftest — Failed to save screenshot: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x11d7c13+10dd3]
+	chromedriver!GetHandleVerifier [0x11d7d44+10f04]
+	chromedriver!(No symbol) [0xfb1d8e]
+	chromedriver!(No symbol) [0xfef2b5]
+	chromedriver!(No symbol) [0x101d7c6]
+	chromedriver!(No symbol) [0x1018c41]
+	chromedriver!(No symbol) [0x1018262]
+	chromedriver!(No symbol) [0xf8517e]
+	chromedriver!(No symbol) [0xf8571e]
+	chromedriver!(No symbol) [0xf85bfd]
+	chromedriver!GetHandleVerifier [0x1434509+26d6c9]
+	chromedriver!GetHandleVerifier [0x142fb43+268d03]
+	chromedriver!GetHandleVerifier [0x144d85b+286a1b]
+	chromedriver!GetHandleVerifier [0x11f1668+2a828]
+	chromedriver!GetHandleVerifier [0x11f97fd+329bd]
+	chromedriver!(No symbol) [0xf84ee9]
+	chromedriver!(No symbol) [0xf84530]
+	chromedriver!GetHandleVerifier [0x157dc9f+3b6e5f]
+	KERNEL32!BaseThreadInitThunk [0x761f5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7722d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7722d7c1+231]
+
+2026-03-19 17:25:44  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:25:44  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:36:05  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:36:05  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:36:05  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:36:05  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:36:12  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:36:12  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:36:13  [INFO    ]  tests.test_bus_search — TC_BUS_001: Valid bus search from config
+2026-03-19 17:36:13  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:36:13  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:36:33  [INFO    ]  pages.home_page — Click dismissal failed or not needed; trying ESC key fallback.
+2026-03-19 17:36:44  [INFO    ]  pages.home_page — Clicking Bus tab
+2026-03-19 17:37:28  [WARNING ]  pages.home_page — Standard tab clicks failed; using JS click as last resort.
+2026-03-19 17:37:28  [ERROR   ]  pages.home_page — All tab click strategies failed: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xb27c13+10dd3]
+	chromedriver!GetHandleVerifier [0xb27d44+10f04]
+	chromedriver!(No symbol) [0x901d8e]
+	chromedriver!(No symbol) [0x93f2b5]
+	chromedriver!(No symbol) [0x96d7c6]
+	chromedriver!(No symbol) [0x968c41]
+	chromedriver!(No symbol) [0x968262]
+	chromedriver!(No symbol) [0x8d517e]
+	chromedriver!(No symbol) [0x8d571e]
+	chromedriver!(No symbol) [0x8d5bfd]
+	chromedriver!GetHandleVerifier [0xd84509+26d6c9]
+	chromedriver!GetHandleVerifier [0xd7fb43+268d03]
+	chromedriver!GetHandleVerifier [0xd9d85b+286a1b]
+	chromedriver!GetHandleVerifier [0xb41668+2a828]
+	chromedriver!GetHandleVerifier [0xb497fd+329bd]
+	chromedriver!(No symbol) [0x8d4ee9]
+	chromedriver!(No symbol) [0x8d4530]
+	chromedriver!GetHandleVerifier [0xecdc9f+3b6e5f]
+	KERNEL32!BaseThreadInitThunk [0x761f5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7722d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7722d7c1+231]
+
+2026-03-19 17:37:29  [WARNING ]  conftest — Failed to save screenshot: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xb27c13+10dd3]
+	chromedriver!GetHandleVerifier [0xb27d44+10f04]
+	chromedriver!(No symbol) [0x901d8e]
+	chromedriver!(No symbol) [0x93f2b5]
+	chromedriver!(No symbol) [0x96d7c6]
+	chromedriver!(No symbol) [0x968c41]
+	chromedriver!(No symbol) [0x968262]
+	chromedriver!(No symbol) [0x8d517e]
+	chromedriver!(No symbol) [0x8d571e]
+	chromedriver!(No symbol) [0x8d5bfd]
+	chromedriver!GetHandleVerifier [0xd84509+26d6c9]
+	chromedriver!GetHandleVerifier [0xd7fb43+268d03]
+	chromedriver!GetHandleVerifier [0xd9d85b+286a1b]
+	chromedriver!GetHandleVerifier [0xb41668+2a828]
+	chromedriver!GetHandleVerifier [0xb497fd+329bd]
+	chromedriver!(No symbol) [0x8d4ee9]
+	chromedriver!(No symbol) [0x8d4530]
+	chromedriver!GetHandleVerifier [0xecdc9f+3b6e5f]
+	KERNEL32!BaseThreadInitThunk [0x761f5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7722d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7722d7c1+231]
+
+2026-03-19 17:37:29  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:37:29  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:37:29  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:37:29  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:37:29  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:37:29  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:37:36  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:37:36  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:37:37  [INFO    ]  tests.test_bus_search — TC_BUS_002: Bus search HYD → BLR
+2026-03-19 17:37:37  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:37:37  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:37:57  [INFO    ]  pages.home_page — Click dismissal failed or not needed; trying ESC key fallback.
+2026-03-19 17:38:08  [INFO    ]  pages.home_page — Clicking Bus tab
+2026-03-19 17:39:14  [WARNING ]  pages.home_page — Standard tab clicks failed; using JS click as last resort.
+2026-03-19 17:42:55  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:42:55  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:42:55  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:42:55  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:43:01  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:43:01  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:43:03  [INFO    ]  tests.test_bus_search — TC_BUS_001: Valid bus search from config
+2026-03-19 17:43:03  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:43:04  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:43:06  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:43:16  [INFO    ]  pages.home_page — Clicking Bus tab
+2026-03-19 17:43:16  [INFO    ]  pages.bus_search_page — === Starting Bus Search ===
+2026-03-19 17:43:16  [INFO    ]  pages.bus_search_page — Route: Bangalore → Chennai | Date: 24 Mar 2026
+2026-03-19 17:43:16  [INFO    ]  pages.bus_search_page — Entering bus FROM city: Bangalore
+2026-03-19 17:43:27  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 17:43:38  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 17:43:39  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 17:43:39  [INFO    ]  pages.bus_search_page — Entering bus TO city: Chennai
+2026-03-19 17:43:59  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 17:44:10  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 17:44:10  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 17:44:10  [INFO    ]  pages.bus_search_page — Selecting travel date: 24 Mar 2026
+2026-03-19 17:44:12  [WARNING ]  BusSearchPage — Standard click intercepted, using JS click on ('css selector', "[data-cy='travelDate'], div.dateInput, div[class*='dateContainer']")
+2026-03-19 17:44:12  [INFO    ]  pages.bus_search_page — Picked travel date: Tue Mar 24 2026
+2026-03-19 17:44:12  [INFO    ]  pages.bus_search_page — Clicking Bus Search button
+2026-03-19 17:44:15  [INFO    ]  pages.bus_search_page — Bus search submitted.
+2026-03-19 17:44:15  [INFO    ]  pages.bus_search_page — Verifying bus results are displayed…
+2026-03-19 17:44:36  [ERROR   ]  pages.bus_search_page — No bus results found.
+2026-03-19 17:44:36  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_valid_bus_search_from_config_20260319_174436.png
+2026-03-19 17:44:36  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:44:37  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:44:37  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:44:37  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:44:37  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:44:37  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:44:45  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:44:45  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:44:47  [INFO    ]  tests.test_bus_search — TC_BUS_002: Bus search HYD → BLR
+2026-03-19 17:44:47  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:44:49  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:44:50  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:45:00  [INFO    ]  pages.home_page — Clicking Bus tab
+2026-03-19 17:45:00  [INFO    ]  pages.bus_search_page — === Starting Bus Search ===
+2026-03-19 17:45:00  [INFO    ]  pages.bus_search_page — Route: Hyderabad → Bangalore | Date: 26 Mar 2026
+2026-03-19 17:45:00  [INFO    ]  pages.bus_search_page — Entering bus FROM city: Hyderabad
+2026-03-19 17:45:11  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 17:45:22  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 17:45:23  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 17:45:23  [INFO    ]  pages.bus_search_page — Entering bus TO city: Bangalore
+2026-03-19 17:45:43  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 17:45:54  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 17:45:54  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 17:45:54  [INFO    ]  pages.bus_search_page — Selecting travel date: 26 Mar 2026
+2026-03-19 17:45:56  [WARNING ]  BusSearchPage — Standard click intercepted, using JS click on ('css selector', "[data-cy='travelDate'], div.dateInput, div[class*='dateContainer']")
+2026-03-19 17:45:56  [INFO    ]  pages.bus_search_page — Picked travel date: Thu Mar 26 2026
+2026-03-19 17:45:56  [INFO    ]  pages.bus_search_page — Clicking Bus Search button
+2026-03-19 17:45:58  [INFO    ]  pages.bus_search_page — Bus search submitted.
+2026-03-19 17:46:08  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_bus_search_hyderabad_to_bangalore_20260319_174608.png
+2026-03-19 17:46:08  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:46:09  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:46:09  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:46:09  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:46:09  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:46:09  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:46:16  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:46:16  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:46:20  [INFO    ]  tests.test_bus_search — TC_BUS_003: URL validation after bus search
+2026-03-19 17:46:20  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:46:21  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:46:22  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:46:32  [INFO    ]  pages.home_page — Clicking Bus tab
+2026-03-19 17:46:33  [INFO    ]  pages.bus_search_page — === Starting Bus Search ===
+2026-03-19 17:46:33  [INFO    ]  pages.bus_search_page — Route: Bangalore → Chennai | Date: 24 Mar 2026
+2026-03-19 17:46:33  [INFO    ]  pages.bus_search_page — Entering bus FROM city: Bangalore
+2026-03-19 17:46:43  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 17:46:55  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 17:46:55  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 17:46:55  [INFO    ]  pages.bus_search_page — Entering bus TO city: Chennai
+2026-03-19 17:47:15  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 17:47:26  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 17:47:27  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 17:47:27  [INFO    ]  pages.bus_search_page — Selecting travel date: 24 Mar 2026
+2026-03-19 17:47:28  [WARNING ]  BusSearchPage — Standard click intercepted, using JS click on ('css selector', "[data-cy='travelDate'], div.dateInput, div[class*='dateContainer']")
+2026-03-19 17:47:28  [INFO    ]  pages.bus_search_page — Picked travel date: Tue Mar 24 2026
+2026-03-19 17:47:28  [INFO    ]  pages.bus_search_page — Clicking Bus Search button
+2026-03-19 17:47:41  [INFO    ]  pages.bus_search_page — Bus search submitted.
+2026-03-19 17:47:42  [INFO    ]  tests.test_bus_search — TC_BUS_003 PASSED ✓ | URL: https://www.makemytrip.com/bus-tickets/search?from=delhi%2c+delhi&to=kanpur%2c+uttar+pradesh&fromcode=mmtcc1199&tocode=mmtcc2140&departuredate=24-03-2026&itineraryid=0b45f1bf-2d82-4064-b99b-c5d779b84af7
+2026-03-19 17:47:42  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:47:42  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:47:42  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:47:42  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:47:42  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:47:42  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:47:46  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:47:46  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:47:48  [INFO    ]  tests.test_flight_search — TC_FLIGHT_001: Valid flight search from config
+2026-03-19 17:47:48  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:47:50  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:47:51  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:48:01  [INFO    ]  pages.home_page — Clicking Flights tab
+2026-03-19 17:48:03  [INFO    ]  pages.flight_search_page — === Starting Flight Search ===
+2026-03-19 17:48:03  [INFO    ]  pages.flight_search_page — Route: Delhi → Mumbai | Date: 26 Mar 2026
+2026-03-19 17:48:03  [INFO    ]  pages.flight_search_page — Entering FROM city: Delhi
+2026-03-19 17:48:05  [INFO    ]  pages.flight_search_page — Selecting suggestion for 'Delhi'...
+2026-03-19 17:48:07  [WARNING ]  FlightSearchPage — Standard click intercepted, using JS click on ('xpath', "//ul[contains(@class,'suggestion') or @role='listbox']//li[1]")
+2026-03-19 17:48:07  [INFO    ]  pages.flight_search_page — Successfully clicked suggestion for 'Delhi'
+2026-03-19 17:48:07  [INFO    ]  pages.flight_search_page — Entering TO city: Mumbai
+2026-03-19 17:48:08  [WARNING ]  FlightSearchPage — Standard click intercepted, using JS click on ('xpath', "//label[contains(@for,'toCity') or @data-cy='toCity']//following::div[1]")
+2026-03-19 17:48:19  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_valid_flight_search_from_config_20260319_174819.png
+2026-03-19 17:48:19  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:48:20  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:48:20  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:48:20  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:48:20  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:48:20  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:48:24  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:48:24  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:48:27  [INFO    ]  tests.test_flight_search — TC_FLIGHT_002: Alternate route flight search BLR → DEL
+2026-03-19 17:48:27  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:48:28  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:48:29  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:48:39  [INFO    ]  pages.home_page — Clicking Flights tab
+2026-03-19 17:48:42  [INFO    ]  pages.flight_search_page — === Starting Flight Search ===
+2026-03-19 17:48:42  [INFO    ]  pages.flight_search_page — Route: Bangalore → Delhi | Date: 02 Apr 2026
+2026-03-19 17:48:42  [INFO    ]  pages.flight_search_page — Entering FROM city: Bangalore
+2026-03-19 17:48:43  [INFO    ]  pages.flight_search_page — Selecting suggestion for 'Bangalore'...
+2026-03-19 17:48:46  [WARNING ]  FlightSearchPage — Standard click intercepted, using JS click on ('xpath', "//ul[contains(@class,'suggestion') or @role='listbox']//li[1]")
+2026-03-19 17:48:46  [INFO    ]  pages.flight_search_page — Successfully clicked suggestion for 'Bangalore'
+2026-03-19 17:48:46  [INFO    ]  pages.flight_search_page — Entering TO city: Delhi
+2026-03-19 17:48:47  [WARNING ]  FlightSearchPage — Standard click intercepted, using JS click on ('xpath', "//label[contains(@for,'toCity') or @data-cy='toCity']//following::div[1]")
+2026-03-19 17:48:57  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_alternate_route_flight_search_20260319_174857.png
+2026-03-19 17:48:57  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:48:58  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:48:58  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:48:58  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:48:58  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:48:58  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:49:02  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:49:02  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:49:04  [INFO    ]  tests.test_flight_search — TC_FLIGHT_003: URL should contain 'flights' after search
+2026-03-19 17:49:04  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:49:06  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:49:08  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:49:18  [INFO    ]  pages.home_page — Clicking Flights tab
+2026-03-19 17:49:25  [INFO    ]  pages.flight_search_page — === Starting Flight Search ===
+2026-03-19 17:49:25  [INFO    ]  pages.flight_search_page — Route: Delhi → Mumbai | Date: 29 Mar 2026
+2026-03-19 17:49:25  [INFO    ]  pages.flight_search_page — Entering FROM city: Delhi
+2026-03-19 17:49:26  [INFO    ]  pages.flight_search_page — Selecting suggestion for 'Delhi'...
+2026-03-19 17:49:28  [WARNING ]  FlightSearchPage — Standard click intercepted, using JS click on ('xpath', "//ul[contains(@class,'suggestion') or @role='listbox']//li[1]")
+2026-03-19 17:49:28  [INFO    ]  pages.flight_search_page — Successfully clicked suggestion for 'Delhi'
+2026-03-19 17:49:28  [INFO    ]  pages.flight_search_page — Entering TO city: Mumbai
+2026-03-19 17:49:30  [WARNING ]  FlightSearchPage — Standard click intercepted, using JS click on ('xpath', "//label[contains(@for,'toCity') or @data-cy='toCity']//following::div[1]")
+2026-03-19 17:49:40  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_flight_search_url_contains_flights_20260319_174940.png
+2026-03-19 17:49:40  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:49:40  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:49:40  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:49:40  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:49:40  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:49:40  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:49:45  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:49:45  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:49:51  [INFO    ]  tests.test_hotel_search — TC_HOTEL_001: Valid hotel search from config
+2026-03-19 17:49:51  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:49:52  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:49:53  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:50:04  [INFO    ]  pages.home_page — Clicking Hotels tab
+2026-03-19 17:50:04  [INFO    ]  pages.hotel_search_page — === Starting Hotel Search ===
+2026-03-19 17:50:04  [INFO    ]  pages.hotel_search_page — City: Goa | Check-in: 26 Mar 2026 | Check-out: 28 Mar 2026 | Rooms: 1 | Adults: 2
+2026-03-19 17:50:04  [INFO    ]  pages.hotel_search_page — Entering hotel city: Goa
+2026-03-19 17:50:15  [INFO    ]  pages.hotel_search_page — City suggestion clicked for: Goa
+2026-03-19 17:50:15  [INFO    ]  pages.hotel_search_page — Selecting check-in date: 26 Mar 2026
+2026-03-19 17:51:16  [INFO    ]  pages.hotel_search_page — Picked date: Thu Mar 26 2026
+2026-03-19 17:51:16  [INFO    ]  pages.hotel_search_page — Selecting check-out date: 28 Mar 2026
+2026-03-19 17:51:16  [INFO    ]  pages.hotel_search_page — Picked date: Sat Mar 28 2026
+2026-03-19 17:51:16  [INFO    ]  pages.hotel_search_page — Clicking Hotel Search button
+2026-03-19 17:51:17  [WARNING ]  HotelSearchPage — Standard click intercepted, using JS click on ('css selector', 'a.primaryBtn, button.primaryBtn')
+2026-03-19 17:51:18  [INFO    ]  pages.hotel_search_page — Hotel search submitted.
+2026-03-19 17:51:18  [INFO    ]  pages.hotel_search_page — Verifying hotel results are displayed…
+2026-03-19 17:51:38  [ERROR   ]  pages.hotel_search_page — No hotel results found.
+2026-03-19 17:51:38  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_valid_hotel_search_from_config_20260319_175138.png
+2026-03-19 17:51:38  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:51:39  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:51:39  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:51:39  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:51:39  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:51:39  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:51:43  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:51:43  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:52:05  [INFO    ]  tests.test_hotel_search — TC_HOTEL_002: Hotel search for Mumbai
+2026-03-19 17:52:05  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:52:13  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:52:33  [INFO    ]  pages.home_page — Click dismissal failed or not needed; trying ESC key fallback.
+2026-03-19 17:52:44  [INFO    ]  pages.home_page — Clicking Hotels tab
+2026-03-19 17:52:47  [INFO    ]  pages.hotel_search_page — === Starting Hotel Search ===
+2026-03-19 17:52:47  [INFO    ]  pages.hotel_search_page — City: Mumbai | Check-in: 29 Mar 2026 | Check-out: 01 Apr 2026 | Rooms: 1 | Adults: 2
+2026-03-19 17:52:47  [INFO    ]  pages.hotel_search_page — Entering hotel city: Mumbai
+2026-03-19 17:52:59  [INFO    ]  pages.hotel_search_page — City suggestion clicked for: Mumbai
+2026-03-19 17:52:59  [INFO    ]  pages.hotel_search_page — Selecting check-in date: 29 Mar 2026
+2026-03-19 17:54:00  [INFO    ]  pages.hotel_search_page — Picked date: Sun Mar 29 2026
+2026-03-19 17:54:00  [INFO    ]  pages.hotel_search_page — Selecting check-out date: 01 Apr 2026
+2026-03-19 17:54:41  [ERROR   ]  pages.hotel_search_page — Could not select date Wed Apr 1 2026
+2026-03-19 17:54:41  [INFO    ]  pages.hotel_search_page — Clicking Hotel Search button
+2026-03-19 17:54:41  [INFO    ]  pages.hotel_search_page — Hotel search submitted.
+2026-03-19 17:54:52  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_hotel_search_mumbai_20260319_175451.png
+2026-03-19 17:54:52  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:54:52  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:54:52  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:54:52  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:54:52  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:54:52  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:54:56  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:54:56  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:54:59  [INFO    ]  tests.test_hotel_search — TC_HOTEL_003: URL validation after hotel search
+2026-03-19 17:54:59  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:55:00  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:55:02  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:55:12  [INFO    ]  pages.home_page — Clicking Hotels tab
+2026-03-19 17:55:12  [INFO    ]  pages.hotel_search_page — === Starting Hotel Search ===
+2026-03-19 17:55:12  [INFO    ]  pages.hotel_search_page — City: Goa | Check-in: 26 Mar 2026 | Check-out: 29 Mar 2026 | Rooms: 1 | Adults: 2
+2026-03-19 17:55:12  [INFO    ]  pages.hotel_search_page — Entering hotel city: Goa
+2026-03-19 17:55:23  [INFO    ]  pages.hotel_search_page — City suggestion clicked for: Goa
+2026-03-19 17:55:23  [INFO    ]  pages.hotel_search_page — Selecting check-in date: 26 Mar 2026
+2026-03-19 17:55:49  [WARNING ]  conftest — Failed to save screenshot: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=146.0.7680.80)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xb27c13+10dd3]
+	chromedriver!GetHandleVerifier [0xb27d44+10f04]
+	chromedriver!(No symbol) [0x901f50]
+	chromedriver!(No symbol) [0x8e0a93]
+	chromedriver!(No symbol) [0x97414b]
+	chromedriver!(No symbol) [0x98a129]
+	chromedriver!(No symbol) [0x96d6a6]
+	chromedriver!(No symbol) [0x940029]
+	chromedriver!(No symbol) [0x940de4]
+	chromedriver!GetHandleVerifier [0xd84509+26d6c9]
+	chromedriver!GetHandleVerifier [0xd7fb43+268d03]
+	chromedriver!GetHandleVerifier [0xd9d85b+286a1b]
+	chromedriver!GetHandleVerifier [0xb41668+2a828]
+	chromedriver!GetHandleVerifier [0xb497fd+329bd]
+	chromedriver!GetHandleVerifier [0xb30588+19748]
+	chromedriver!GetHandleVerifier [0xb30752+19912]
+	chromedriver!GetHandleVerifier [0xb199da+2b9a]
+	KERNEL32!BaseThreadInitThunk [0x761f5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7722d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7722d7c1+231]
+
+2026-03-19 17:55:49  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:55:50  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:56:27  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:56:27  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:56:27  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:56:28  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:56:32  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:56:32  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:56:36  [INFO    ]  tests.test_flight_search — TC_FLIGHT_001: Valid flight search from config
+2026-03-19 17:56:36  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:56:38  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:56:39  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:56:49  [INFO    ]  pages.home_page — Clicking Flights tab
+2026-03-19 17:56:52  [INFO    ]  pages.flight_search_page — === Starting Flight Search ===
+2026-03-19 17:56:52  [INFO    ]  pages.flight_search_page — Route: Delhi → Mumbai | Date: 26 Mar 2026
+2026-03-19 17:56:52  [INFO    ]  pages.flight_search_page — Entering FROM city: Delhi
+2026-03-19 17:56:54  [INFO    ]  pages.flight_search_page — Selecting suggestion for 'Delhi'...
+2026-03-19 17:56:55  [INFO    ]  pages.flight_search_page — Successfully clicked suggestion for 'Delhi'
+2026-03-19 17:56:55  [INFO    ]  pages.flight_search_page — Entering TO city: Mumbai
+2026-03-19 17:57:06  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_valid_flight_search_from_config_20260319_175705.png
+2026-03-19 17:57:06  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:57:06  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:57:06  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:57:06  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:57:06  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:57:06  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:57:10  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:57:10  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:57:13  [INFO    ]  tests.test_flight_search — TC_FLIGHT_002: Alternate route flight search BLR → DEL
+2026-03-19 17:57:13  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:57:15  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:57:16  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:57:26  [INFO    ]  pages.home_page — Clicking Flights tab
+2026-03-19 17:57:29  [INFO    ]  pages.flight_search_page — === Starting Flight Search ===
+2026-03-19 17:57:29  [INFO    ]  pages.flight_search_page — Route: Bangalore → Delhi | Date: 02 Apr 2026
+2026-03-19 17:57:29  [INFO    ]  pages.flight_search_page — Entering FROM city: Bangalore
+2026-03-19 17:57:30  [INFO    ]  pages.flight_search_page — Selecting suggestion for 'Bangalore'...
+2026-03-19 17:57:32  [INFO    ]  pages.flight_search_page — Successfully clicked suggestion for 'Bangalore'
+2026-03-19 17:57:32  [INFO    ]  pages.flight_search_page — Entering TO city: Delhi
+2026-03-19 17:57:42  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_alternate_route_flight_search_20260319_175742.png
+2026-03-19 17:57:42  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:57:42  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:57:42  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:57:42  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:57:42  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:57:42  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:57:47  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:57:47  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:57:50  [INFO    ]  tests.test_flight_search — TC_FLIGHT_003: URL should contain 'flights' after search
+2026-03-19 17:57:50  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:57:52  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:57:53  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:58:03  [INFO    ]  pages.home_page — Clicking Flights tab
+2026-03-19 17:58:07  [INFO    ]  pages.flight_search_page — === Starting Flight Search ===
+2026-03-19 17:58:07  [INFO    ]  pages.flight_search_page — Route: Delhi → Mumbai | Date: 29 Mar 2026
+2026-03-19 17:58:07  [INFO    ]  pages.flight_search_page — Entering FROM city: Delhi
+2026-03-19 17:58:09  [INFO    ]  pages.flight_search_page — Selecting suggestion for 'Delhi'...
+2026-03-19 17:58:10  [INFO    ]  pages.flight_search_page — Successfully clicked suggestion for 'Delhi'
+2026-03-19 17:58:10  [INFO    ]  pages.flight_search_page — Entering TO city: Mumbai
+2026-03-19 17:58:21  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_flight_search_url_contains_flights_20260319_175821.png
+2026-03-19 17:58:21  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 17:58:21  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:59:30  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 17:59:30  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 17:59:30  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 17:59:31  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 17:59:35  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 17:59:35  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 17:59:39  [INFO    ]  tests.test_hotel_search — TC_HOTEL_001: Valid hotel search from config
+2026-03-19 17:59:39  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 17:59:41  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 17:59:42  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 17:59:52  [INFO    ]  pages.home_page — Clicking Hotels tab
+2026-03-19 17:59:52  [INFO    ]  pages.hotel_search_page — === Starting Hotel Search ===
+2026-03-19 17:59:52  [INFO    ]  pages.hotel_search_page — City: Goa | Check-in: 26 Mar 2026 | Check-out: 28 Mar 2026 | Rooms: 1 | Adults: 2
+2026-03-19 17:59:52  [INFO    ]  pages.hotel_search_page — Entering hotel city: Goa
+2026-03-19 18:00:04  [INFO    ]  pages.hotel_search_page — City suggestion clicked for: Goa
+2026-03-19 18:00:04  [INFO    ]  pages.hotel_search_page — Selecting check-in date: 26 Mar 2026
+2026-03-19 18:01:05  [INFO    ]  pages.hotel_search_page — Picked date: Thu Mar 26 2026
+2026-03-19 18:01:05  [INFO    ]  pages.hotel_search_page — Selecting check-out date: 28 Mar 2026
+2026-03-19 18:01:05  [INFO    ]  pages.hotel_search_page — Picked date: Sat Mar 28 2026
+2026-03-19 18:01:05  [INFO    ]  pages.hotel_search_page — Clicking Hotel Search button
+2026-03-19 18:01:07  [WARNING ]  HotelSearchPage — Standard click intercepted, using JS click on ('css selector', 'a.primaryBtn, button.primaryBtn')
+2026-03-19 18:01:07  [INFO    ]  pages.hotel_search_page — Hotel search submitted.
+2026-03-19 18:01:07  [INFO    ]  pages.hotel_search_page — Verifying hotel results are displayed…
+2026-03-19 18:01:27  [ERROR   ]  pages.hotel_search_page — No hotel results found.
+2026-03-19 18:01:28  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_valid_hotel_search_from_config_20260319_180127.png
+2026-03-19 18:01:28  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 18:01:28  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:01:28  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:01:28  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 18:01:28  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 18:01:28  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 18:01:32  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 18:01:32  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 18:01:35  [INFO    ]  tests.test_hotel_search — TC_HOTEL_002: Hotel search for Mumbai
+2026-03-19 18:01:35  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 18:01:36  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 18:01:37  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 18:01:47  [INFO    ]  pages.home_page — Clicking Hotels tab
+2026-03-19 18:01:48  [INFO    ]  pages.hotel_search_page — === Starting Hotel Search ===
+2026-03-19 18:01:48  [INFO    ]  pages.hotel_search_page — City: Mumbai | Check-in: 29 Mar 2026 | Check-out: 01 Apr 2026 | Rooms: 1 | Adults: 2
+2026-03-19 18:01:48  [INFO    ]  pages.hotel_search_page — Entering hotel city: Mumbai
+2026-03-19 18:01:59  [INFO    ]  pages.hotel_search_page — City suggestion clicked for: Mumbai
+2026-03-19 18:01:59  [INFO    ]  pages.hotel_search_page — Selecting check-in date: 29 Mar 2026
+2026-03-19 18:03:00  [INFO    ]  pages.hotel_search_page — Picked date: Sun Mar 29 2026
+2026-03-19 18:03:00  [INFO    ]  pages.hotel_search_page — Selecting check-out date: 01 Apr 2026
+2026-03-19 18:04:02  [ERROR   ]  pages.hotel_search_page — Could not select date Wed Apr 1 2026
+2026-03-19 18:04:02  [INFO    ]  pages.hotel_search_page — Clicking Hotel Search button
+2026-03-19 18:04:06  [INFO    ]  pages.hotel_search_page — Hotel search submitted.
+2026-03-19 18:04:16  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_hotel_search_mumbai_20260319_180416.png
+2026-03-19 18:04:16  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 18:04:16  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:04:16  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:04:16  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 18:04:16  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 18:04:16  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 18:04:21  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 18:04:21  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 18:04:28  [INFO    ]  tests.test_hotel_search — TC_HOTEL_003: URL validation after hotel search
+2026-03-19 18:04:28  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 18:04:29  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 18:04:30  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 18:04:40  [INFO    ]  pages.home_page — Clicking Hotels tab
+2026-03-19 18:04:40  [INFO    ]  pages.hotel_search_page — === Starting Hotel Search ===
+2026-03-19 18:04:40  [INFO    ]  pages.hotel_search_page — City: Goa | Check-in: 26 Mar 2026 | Check-out: 29 Mar 2026 | Rooms: 1 | Adults: 2
+2026-03-19 18:04:40  [INFO    ]  pages.hotel_search_page — Entering hotel city: Goa
+2026-03-19 18:04:52  [INFO    ]  pages.hotel_search_page — City suggestion clicked for: Goa
+2026-03-19 18:04:52  [INFO    ]  pages.hotel_search_page — Selecting check-in date: 26 Mar 2026
+2026-03-19 18:05:53  [INFO    ]  pages.hotel_search_page — Picked date: Thu Mar 26 2026
+2026-03-19 18:05:53  [INFO    ]  pages.hotel_search_page — Selecting check-out date: 29 Mar 2026
+2026-03-19 18:05:54  [INFO    ]  pages.hotel_search_page — Picked date: Sun Mar 29 2026
+2026-03-19 18:05:54  [INFO    ]  pages.hotel_search_page — Clicking Hotel Search button
+2026-03-19 18:05:55  [WARNING ]  HotelSearchPage — Standard click intercepted, using JS click on ('css selector', 'a.primaryBtn, button.primaryBtn')
+2026-03-19 18:05:55  [INFO    ]  pages.hotel_search_page — Hotel search submitted.
+2026-03-19 18:05:55  [INFO    ]  tests.test_hotel_search — TC_HOTEL_003 PASSED ✓ | URL: https://www.makemytrip.com/hotels/
+2026-03-19 18:05:55  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 18:05:55  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:07:12  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:07:12  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 18:07:12  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 18:07:12  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 18:07:17  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 18:07:17  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 18:07:20  [INFO    ]  tests.test_bus_search — TC_BUS_001: Valid bus search from config
+2026-03-19 18:07:20  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 18:07:22  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 18:07:23  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 18:07:33  [INFO    ]  pages.home_page — Clicking Bus tab
+2026-03-19 18:07:33  [INFO    ]  pages.bus_search_page — === Starting Bus Search ===
+2026-03-19 18:07:33  [INFO    ]  pages.bus_search_page — Route: Bangalore → Chennai | Date: 24 Mar 2026
+2026-03-19 18:07:33  [INFO    ]  pages.bus_search_page — Entering bus FROM city: Bangalore
+2026-03-19 18:07:44  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 18:07:55  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 18:07:55  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 18:07:55  [INFO    ]  pages.bus_search_page — Entering bus TO city: Chennai
+2026-03-19 18:08:15  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 18:08:26  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 18:08:27  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 18:08:27  [INFO    ]  pages.bus_search_page — Selecting travel date: 24 Mar 2026
+2026-03-19 18:08:28  [WARNING ]  BusSearchPage — Standard click intercepted, using JS click on ('css selector', "[data-cy='travelDate'], div.dateInput, div[class*='dateContainer']")
+2026-03-19 18:08:28  [INFO    ]  pages.bus_search_page — Picked travel date: Tue Mar 24 2026
+2026-03-19 18:08:28  [INFO    ]  pages.bus_search_page — Clicking Bus Search button
+2026-03-19 18:08:31  [INFO    ]  pages.bus_search_page — Bus search submitted.
+2026-03-19 18:08:31  [INFO    ]  pages.bus_search_page — Verifying bus results are displayed…
+2026-03-19 18:08:51  [ERROR   ]  pages.bus_search_page — No bus results found.
+2026-03-19 18:08:51  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_valid_bus_search_from_config_20260319_180851.png
+2026-03-19 18:08:51  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 18:08:52  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:08:52  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:08:52  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 18:08:52  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 18:08:52  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 18:08:56  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 18:08:56  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 18:08:59  [INFO    ]  tests.test_bus_search — TC_BUS_002: Bus search HYD → BLR
+2026-03-19 18:08:59  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 18:09:00  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 18:09:01  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 18:09:12  [INFO    ]  pages.home_page — Clicking Bus tab
+2026-03-19 18:09:12  [INFO    ]  pages.bus_search_page — === Starting Bus Search ===
+2026-03-19 18:09:12  [INFO    ]  pages.bus_search_page — Route: Hyderabad → Bangalore | Date: 26 Mar 2026
+2026-03-19 18:09:12  [INFO    ]  pages.bus_search_page — Entering bus FROM city: Hyderabad
+2026-03-19 18:09:22  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 18:09:33  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 18:09:34  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 18:09:34  [INFO    ]  pages.bus_search_page — Entering bus TO city: Bangalore
+2026-03-19 18:09:54  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 18:10:05  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 18:10:06  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 18:10:06  [INFO    ]  pages.bus_search_page — Selecting travel date: 26 Mar 2026
+2026-03-19 18:10:07  [WARNING ]  BusSearchPage — Standard click intercepted, using JS click on ('css selector', "[data-cy='travelDate'], div.dateInput, div[class*='dateContainer']")
+2026-03-19 18:10:07  [INFO    ]  pages.bus_search_page — Picked travel date: Thu Mar 26 2026
+2026-03-19 18:10:07  [INFO    ]  pages.bus_search_page — Clicking Bus Search button
+2026-03-19 18:10:09  [INFO    ]  pages.bus_search_page — Bus search submitted.
+2026-03-19 18:10:19  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_bus_search_hyderabad_to_bangalore_20260319_181019.png
+2026-03-19 18:10:19  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 18:10:19  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:10:19  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:10:19  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 18:10:19  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 18:10:19  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 18:10:23  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 18:10:23  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 18:10:26  [INFO    ]  tests.test_bus_search — TC_BUS_003: URL validation after bus search
+2026-03-19 18:10:26  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 18:10:27  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 18:10:28  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 18:10:38  [INFO    ]  pages.home_page — Clicking Bus tab
+2026-03-19 18:10:39  [INFO    ]  pages.bus_search_page — === Starting Bus Search ===
+2026-03-19 18:10:39  [INFO    ]  pages.bus_search_page — Route: Bangalore → Chennai | Date: 24 Mar 2026
+2026-03-19 18:10:39  [INFO    ]  pages.bus_search_page — Entering bus FROM city: Bangalore
+2026-03-19 18:10:49  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 18:11:00  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 18:11:01  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 18:11:01  [INFO    ]  pages.bus_search_page — Entering bus TO city: Chennai
+2026-03-19 18:11:21  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 18:11:32  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 18:11:32  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 18:11:32  [INFO    ]  pages.bus_search_page — Selecting travel date: 24 Mar 2026
+2026-03-19 18:11:34  [WARNING ]  BusSearchPage — Standard click intercepted, using JS click on ('css selector', "[data-cy='travelDate'], div.dateInput, div[class*='dateContainer']")
+2026-03-19 18:11:34  [INFO    ]  pages.bus_search_page — Picked travel date: Tue Mar 24 2026
+2026-03-19 18:11:34  [INFO    ]  pages.bus_search_page — Clicking Bus Search button
+2026-03-19 18:11:38  [INFO    ]  pages.bus_search_page — Bus search submitted.
+2026-03-19 18:11:38  [INFO    ]  tests.test_bus_search — TC_BUS_003 PASSED ✓ | URL: https://www.makemytrip.com/bus-tickets/search?from=delhi%2c+delhi&to=kanpur%2c+uttar+pradesh&fromcode=mmtcc1199&tocode=mmtcc2140&departuredate=24-03-2026&itineraryid=f685e854-9458-43f3-ae6f-bad7e5b8d805
+2026-03-19 18:11:38  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 18:11:38  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:12:00  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:12:00  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 18:12:00  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 18:12:00  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 18:12:04  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 18:12:04  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 18:12:07  [INFO    ]  tests.test_bus_search — TC_BUS_001: Valid bus search from config
+2026-03-19 18:12:07  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 18:12:08  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 18:12:09  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 18:12:20  [INFO    ]  pages.home_page — Clicking Bus tab
+2026-03-19 18:12:20  [INFO    ]  pages.bus_search_page — === Starting Bus Search ===
+2026-03-19 18:12:20  [INFO    ]  pages.bus_search_page — Route: Bangalore → Chennai | Date: 24 Mar 2026
+2026-03-19 18:12:20  [INFO    ]  pages.bus_search_page — Entering bus FROM city: Bangalore
+2026-03-19 18:12:30  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 18:12:42  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 18:12:42  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 18:12:42  [INFO    ]  pages.bus_search_page — Entering bus TO city: Chennai
+2026-03-19 18:13:02  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 18:13:13  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 18:13:14  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 18:13:14  [INFO    ]  pages.bus_search_page — Selecting travel date: 24 Mar 2026
+2026-03-19 18:13:15  [WARNING ]  BusSearchPage — Standard click intercepted, using JS click on ('css selector', "[data-cy='travelDate'], div.dateInput, div[class*='dateContainer']")
+2026-03-19 18:13:15  [INFO    ]  pages.bus_search_page — Picked travel date: Tue Mar 24 2026
+2026-03-19 18:13:15  [INFO    ]  pages.bus_search_page — Clicking Bus Search button
+2026-03-19 18:13:18  [INFO    ]  pages.bus_search_page — Bus search submitted.
+2026-03-19 18:13:18  [INFO    ]  pages.bus_search_page — Verifying bus results are displayed…
+2026-03-19 18:13:38  [ERROR   ]  pages.bus_search_page — No bus results found.
+2026-03-19 18:13:39  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_valid_bus_search_from_config_20260319_181339.png
+2026-03-19 18:13:39  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 18:13:39  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:13:39  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:13:39  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 18:13:39  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 18:13:39  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 18:13:44  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 18:13:44  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 18:13:46  [INFO    ]  tests.test_bus_search — TC_BUS_002: Bus search HYD → BLR
+2026-03-19 18:13:46  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 18:13:48  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 18:13:49  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 18:13:59  [INFO    ]  pages.home_page — Clicking Bus tab
+2026-03-19 18:13:59  [INFO    ]  pages.bus_search_page — === Starting Bus Search ===
+2026-03-19 18:13:59  [INFO    ]  pages.bus_search_page — Route: Hyderabad → Bangalore | Date: 26 Mar 2026
+2026-03-19 18:13:59  [INFO    ]  pages.bus_search_page — Entering bus FROM city: Hyderabad
+2026-03-19 18:14:10  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 18:14:21  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 18:14:21  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 18:14:21  [INFO    ]  pages.bus_search_page — Entering bus TO city: Bangalore
+2026-03-19 18:14:41  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 18:14:53  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 18:14:53  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 18:14:53  [INFO    ]  pages.bus_search_page — Selecting travel date: 26 Mar 2026
+2026-03-19 18:14:54  [WARNING ]  BusSearchPage — Standard click intercepted, using JS click on ('css selector', "[data-cy='travelDate'], div.dateInput, div[class*='dateContainer']")
+2026-03-19 18:14:54  [INFO    ]  pages.bus_search_page — Picked travel date: Thu Mar 26 2026
+2026-03-19 18:14:54  [INFO    ]  pages.bus_search_page — Clicking Bus Search button
+2026-03-19 18:14:56  [INFO    ]  pages.bus_search_page — Bus search submitted.
+2026-03-19 18:15:06  [ERROR   ]  conftest — TEST FAILED — screenshot saved: screenshots\test_bus_search_hyderabad_to_bangalore_20260319_181506.png
+2026-03-19 18:15:06  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 18:15:07  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:15:07  [INFO    ]  conftest — ──────────────────────────────────────────────
+2026-03-19 18:15:07  [INFO    ]  conftest — Setting up WebDriver for test
+2026-03-19 18:15:07  [INFO    ]  utils.driver_factory — Initialising WebDriver — browser: chrome, headless: False
+2026-03-19 18:15:07  [INFO    ]  utils.driver_factory — Using undetected-chromedriver for Chrome
+2026-03-19 18:15:11  [INFO    ]  utils.driver_factory — WebDriver initialised successfully.
+2026-03-19 18:15:11  [INFO    ]  conftest — Navigating to base URL: https://www.makemytrip.com
+2026-03-19 18:15:13  [INFO    ]  tests.test_bus_search — TC_BUS_003: URL validation after bus search
+2026-03-19 18:15:13  [INFO    ]  HomePage — Navigating to: https://www.makemytrip.com
+2026-03-19 18:15:15  [INFO    ]  pages.home_page — Checking for login popup…
+2026-03-19 18:15:16  [INFO    ]  pages.home_page — Login popup dismissed via click on ('css selector', '.commonModal__close, .icon-close-popup, span.icon-close')
+2026-03-19 18:15:26  [INFO    ]  pages.home_page — Clicking Bus tab
+2026-03-19 18:15:26  [INFO    ]  pages.bus_search_page — === Starting Bus Search ===
+2026-03-19 18:15:26  [INFO    ]  pages.bus_search_page — Route: Bangalore → Chennai | Date: 24 Mar 2026
+2026-03-19 18:15:26  [INFO    ]  pages.bus_search_page — Entering bus FROM city: Bangalore
+2026-03-19 18:15:37  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 18:15:48  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 18:15:49  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 18:15:49  [INFO    ]  pages.bus_search_page — Entering bus TO city: Chennai
+2026-03-19 18:16:09  [INFO    ]  pages.bus_search_page — Selecting bus suggestion...
+2026-03-19 18:16:20  [WARNING ]  pages.bus_search_page — Bus suggestion click failed; trying keyboard fallback.
+2026-03-19 18:16:20  [INFO    ]  pages.bus_search_page — Bus suggestion selected via keyboard.
+2026-03-19 18:16:20  [INFO    ]  pages.bus_search_page — Selecting travel date: 24 Mar 2026
+2026-03-19 18:16:21  [WARNING ]  BusSearchPage — Standard click intercepted, using JS click on ('css selector', "[data-cy='travelDate'], div.dateInput, div[class*='dateContainer']")
+2026-03-19 18:16:22  [INFO    ]  pages.bus_search_page — Picked travel date: Tue Mar 24 2026
+2026-03-19 18:16:22  [INFO    ]  pages.bus_search_page — Clicking Bus Search button
+2026-03-19 18:16:25  [INFO    ]  pages.bus_search_page — Bus search submitted.
+2026-03-19 18:16:25  [INFO    ]  tests.test_bus_search — TC_BUS_003 PASSED ✓ | URL: https://www.makemytrip.com/bus-tickets/search?from=delhi%2c+delhi&to=kanpur%2c+uttar+pradesh&fromcode=mmtcc1199&tocode=mmtcc2140&departuredate=24-03-2026&itineraryid=33cad495-500f-49b4-bdf3-6983803592ff
+2026-03-19 18:16:25  [INFO    ]  conftest — Tearing down WebDriver
+2026-03-19 18:16:25  [INFO    ]  conftest — ──────────────────────────────────────────────

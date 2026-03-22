@@ -1,0 +1,52 @@
+# ===================================================
+# MakeMyTrip Automation Framework - Configuration
+# ===================================================
+
+browser:
+  name: chrome          # Options: chrome, firefox, edge
+  headless: false       # Set true for headless mode
+  window_size: "1920,1080"
+  implicit_wait: 10     # seconds
+
+application:
+  base_url: "https://www.makemytrip.com"
+  timeout: 30           # Explicit wait timeout (seconds)
+  page_load_timeout: 60
+
+# Test credentials (for login tests if needed)
+credentials:
+  username: "your_email@example.com"
+  password: "your_password"
+  mobile: "9999999999"
+
+# Default search data
+search_data:
+  flight:
+    from_city: "Delhi"
+    to_city: "Mumbai"
+    departure_date_offset: 7   # days from today
+    trip_type: "O"             # O=One Way, R=Round Trip
+
+  hotel:
+    city: "Goa"
+    checkin_date_offset: 7
+    checkout_date_offset: 9
+    rooms: 1
+    adults: 2
+
+  bus:
+    from_city: "Bangalore"
+    to_city: "Chennai"
+    travel_date_offset: 5      # days from today
+
+# Paths
+paths:
+  screenshots: "screenshots"
+  reports: "reports"
+  logs: "logs"
+
+# Logging
+logging:
+  level: "INFO"         # DEBUG, INFO, WARNING, ERROR
+  log_to_file: true
+  log_filename: "logs/test_execution.log"
