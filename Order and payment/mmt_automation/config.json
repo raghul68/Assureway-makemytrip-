@@ -1,0 +1,16 @@
+{
+  "baseUrl": "https://www.makemytrip.com/",
+  "headless": false,
+  "browserName": "chrome",
+  "search": {
+    "from": "Delhi",
+    "to": "Mumbai"
+  },
+  "traveler": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "mobile": "9876543210",
+    "email": "johndoe@example.com",
+    "state": "Tamil Nadu"
+  }
+}
