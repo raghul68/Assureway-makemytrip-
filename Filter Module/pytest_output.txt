@@ -1,0 +1,199 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\acer\AppData\Local\Python\pythoncore-3.14-64\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.14.3', 'Platform': 'Windows-11-10.0.26200-SP0', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'html': '4.2.0', 'metadata': '3.1.1', 'xdist': '3.8.0'}}
+rootdir: C:\Users\acer\Desktop\New folder (5)
+plugins: html-4.2.0, metadata-3.1.1, xdist-3.8.0
+collecting ... collected 1 item
+
+test_details.py::test_flight_details FAILED
+
+================================== FAILURES ===================================
+_____________________________ test_flight_details _____________________________
+
+driver = <undetected_chromedriver.Chrome (session="c71f8fa3aef067bae4e6254084960ca0")>
+
+    def test_flight_details(driver):
+        logger.info("Starting test_flight_details")
+        page = DetailsPage(driver)
+        page.open()
+        page.close_login_popup()
+    
+        page.perform_search("flight")
+>       page.select_first_result("flight")
+
+test_details.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+details_page.py:75: in select_first_result
+    self.driver.execute_script("arguments[0].click();", book_now_btn)
+..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\remote\webdriver.py:532: in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\remote\webdriver.py:446: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000002710C3DEA50>
+response = {'status': 404, 'value': '{"value":{"error":"stale element reference","message":"stale element reference: stale elemen...ntdll!RtlInitializeExceptionChain [0x770fd81b+6b]\\n\\tntdll!RtlGetAppContainerNamedObjectPath [0x770fd7a1+231]\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -> None:
+        """Check that a JSON response from the WebDriver does not have an error.
+    
+        Args:
+            response: The JSON response from the WebDriver server as a dictionary
+                object.
+    
+        Raises:
+            WebDriverException: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message") if isinstance(message, dict) else None
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "<anonymous>")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "<anonymous>")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+>       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+E         (Session info: chrome=146.0.7680.80); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+E       Stacktrace:
+E       	undetected_chromedriver!GetHandleVerifier [0x817c13+10dd3]
+E       	undetected_chromedriver!GetHandleVerifier [0x817d44+10f04]
+E       	undetected_chromedriver!(No symbol) [0x5f1f50]
+E       	undetected_chromedriver!(No symbol) [0x5f8bbc]
+E       	undetected_chromedriver!(No symbol) [0x5fb0d2]
+E       	undetected_chromedriver!(No symbol) [0x67b521]
+E       	undetected_chromedriver!(No symbol) [0x65d90c]
+E       	undetected_chromedriver!(No symbol) [0x67a7de]
+E       	undetected_chromedriver!(No symbol) [0x65d6a6]
+E       	undetected_chromedriver!(No symbol) [0x630029]
+E       	undetected_chromedriver!(No symbol) [0x630de4]
+E       	undetected_chromedriver!GetHandleVerifier [0xa74509+26d6c9]
+E       	undetected_chromedriver!GetHandleVerifier [0xa6fb43+268d03]
+E       	undetected_chromedriver!GetHandleVerifier [0xa8d85b+286a1b]
+E       	undetected_chromedriver!GetHandleVerifier [0x831668+2a828]
+E       	undetected_chromedriver!GetHandleVerifier [0x8397fd+329bd]
+E       	undetected_chromedriver!GetHandleVerifier [0x820588+19748]
+E       	undetected_chromedriver!GetHandleVerifier [0x820752+19912]
+E       	undetected_chromedriver!GetHandleVerifier [0x8099da+2b9a]
+E       	KERNEL32!BaseThreadInitThunk [0x75ad5d49+19]
+E       	ntdll!RtlInitializeExceptionChain [0x770fd81b+6b]
+E       	ntdll!RtlGetAppContainerNamedObjectPath [0x770fd7a1+231]
+
+..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:232: StaleElementReferenceException
+----------------------------- Captured log setup ------------------------------
+INFO     undetected_chromedriver.patcher:patcher.py:346 patching driver executable C:\Users\acer\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+------------------------------ Captured log call ------------------------------
+INFO     test_details:test_details.py:8 Starting test_flight_details
+INFO     DetailsPage:details_page.py:15 Opened MakeMyTrip homepage.
+INFO     DetailsPage:details_page.py:23 Closed login popup.
+INFO     DetailsPage:details_page.py:43 Clicked on flight menu.
+INFO     DetailsPage:details_page.py:49 Clicked on flight search button.
+ERROR    DetailsPage:details_page.py:95 Error clicking first flight result: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=146.0.7680.80); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	undetected_chromedriver!GetHandleVerifier [0x817c13+10dd3]
+	undetected_chromedriver!GetHandleVerifier [0x817d44+10f04]
+	undetected_chromedriver!(No symbol) [0x5f1f50]
+	undetected_chromedriver!(No symbol) [0x5f8bbc]
+	undetected_chromedriver!(No symbol) [0x5fb0d2]
+	undetected_chromedriver!(No symbol) [0x67b521]
+	undetected_chromedriver!(No symbol) [0x65d90c]
+	undetected_chromedriver!(No symbol) [0x67a7de]
+	undetected_chromedriver!(No symbol) [0x65d6a6]
+	undetected_chromedriver!(No symbol) [0x630029]
+	undetected_chromedriver!(No symbol) [0x630de4]
+	undetected_chromedriver!GetHandleVerifier [0xa74509+26d6c9]
+	undetected_chromedriver!GetHandleVerifier [0xa6fb43+268d03]
+	undetected_chromedriver!GetHandleVerifier [0xa8d85b+286a1b]
+	undetected_chromedriver!GetHandleVerifier [0x831668+2a828]
+	undetected_chromedriver!GetHandleVerifier [0x8397fd+329bd]
+	undetected_chromedriver!GetHandleVerifier [0x820588+19748]
+	undetected_chromedriver!GetHandleVerifier [0x820752+19912]
+	undetected_chromedriver!GetHandleVerifier [0x8099da+2b9a]
+	KERNEL32!BaseThreadInitThunk [0x75ad5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x770fd81b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x770fd7a1+231]
+============================== warnings summary ===============================
+test_details.py::test_flight_details
+  C:\Users\acer\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\undetected_chromedriver\patcher.py:254: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    return LooseVersion(last_versions["channels"]["Stable"]["version"])
+
+test_details.py::test_flight_details
+  C:\Users\acer\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\undetected_chromedriver\__init__.py:363: DeprecationWarning: 'locale.getdefaultlocale' is deprecated and slated for removal in Python 3.15. Use setlocale(), getencoding() and getlocale() instead.
+    language = locale.getdefaultlocale()[0].replace("_", "-")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED test_details.py::test_flight_details - selenium.common.exceptions.Stal...
+======================= 1 failed, 2 warnings in 19.79s ========================
