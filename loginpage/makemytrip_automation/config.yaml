@@ -1,0 +1,27 @@
+# =============================================================
+# MakeMyTrip Automation — External Configuration File
+# =============================================================
+
+# Application
+base_url: "https://www.makemytrip.com/"
+browser: "chrome"
+headless: false
+
+# Timeouts (seconds)
+implicit_wait: 5
+explicit_wait: 20
+page_load_timeout: 30
+
+# Output directories
+screenshots_dir: "screenshots"
+reports_dir: "reports"
+logs_dir: "logs"
+
+# Test credentials
+# NOTE: MakeMyTrip login uses OTP — these are for demonstration purposes.
+# Valid flow will reach the OTP step; invalid flow tests bad email format.
+credentials:
+  valid_email: "testuser@example.com"
+  valid_phone: "9999999999"
+  invalid_email: "invalid_email_format"
+  invalid_phone: "123"
