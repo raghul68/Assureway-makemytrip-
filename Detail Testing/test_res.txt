@@ -1,0 +1,138 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\acer\AppData\Local\Python\pythoncore-3.14-64\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.14.3', 'Platform': 'Windows-11-10.0.26200-SP0', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'html': '4.2.0', 'metadata': '3.1.1', 'xdist': '3.8.0'}}
+rootdir: C:\Users\acer\Desktop\New folder (6)
+configfile: pytest.ini
+plugins: html-4.2.0, metadata-3.1.1, xdist-3.8.0
+collecting ... collected 1 item
+
+test_details.py::test_makemytrip_flow Clicked body to dismiss popup.
+FAILED
+
+================================== FAILURES ===================================
+____________________________ test_makemytrip_flow _____________________________
+
+driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="aefb8fe6315d3076fddcf10eb7629ffc")>
+
+    def test_makemytrip_flow(driver):
+        mmt = MMTPage(driver)
+    
+        # 1. Open MakeMyTrip
+        mmt.open_url("https://www.makemytrip.com/")
+    
+        # 2. Close login popup
+        mmt.close_login_popup()
+    
+        # 3. Select From and To cities
+        # (Flights is usually default, but we'll click it just in case as requested)
+        try:
+            from selenium.webdriver.common.by import By
+            driver.find_element(By.XPATH, "//li[@data-cy='menu_Flights']").click()
+        except:
+            pass
+    
+>       mmt.search_flights("Mumbai", "Delhi")
+
+test_details.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+details_page.py:44: in search_flights
+    self.wait.until(EC.element_to_be_clickable(self.FROM_CITY)).click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="aefb8fe6315d3076fddcf10eb7629ffc")>
+method = <function element_to_be_clickable.<locals>._predicate at 0x00000149CD254670>
+message = ''
+
+    def until(self, method: Callable[[D], Literal[False] | T], message: str = "") -> T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Args:
+            method: A callable object that takes a WebDriver instance as an
+                argument.
+            message: Optional message for TimeoutException.
+    
+        Returns:
+            The result of the last call to `method`.
+    
+        Raises:
+            TimeoutException: If 'method' does not return a truthy value within
+                the WebDriverWait object's timeout.
+    
+        Example:
+            >>> from selenium.webdriver.common.by import By
+            >>> from selenium.webdriver.support.ui import WebDriverWait
+            >>> from selenium.webdriver.support import expected_conditions as EC
+            >>>
+            >>> # Wait until an element is visible on the page
+            >>> wait = WebDriverWait(driver, 10)
+            >>> element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+            >>> print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() > end_time:
+                break
+            time.sleep(self._poll)
+>       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message: 
+E       Stacktrace:
+E       	chromedriver!GetHandleVerifier [0x7ff6530f3045+14585]
+E       	chromedriver!GetHandleVerifier [0x7ff6530f30b0+145f0]
+E       	chromedriver!(No symbol) [0x7ff652e5db7d]
+E       	chromedriver!(No symbol) [0x7ff652eb73ae]
+E       	chromedriver!(No symbol) [0x7ff652eb76bc]
+E       	chromedriver!(No symbol) [0x7ff652f07a57]
+E       	chromedriver!(No symbol) [0x7ff652f045af]
+E       	chromedriver!(No symbol) [0x7ff652ea9a18]
+E       	chromedriver!(No symbol) [0x7ff652eaa8f3]
+E       	chromedriver!GetHandleVerifier [0x7ff6533fac5d+31c19d]
+E       	chromedriver!GetHandleVerifier [0x7ff6533f536d+3168ad]
+E       	chromedriver!GetHandleVerifier [0x7ff653417d8a+3392ca]
+E       	chromedriver!GetHandleVerifier [0x7ff65310f445+30985]
+E       	chromedriver!GetHandleVerifier [0x7ff6531184dc+39a1c]
+E       	chromedriver!GetHandleVerifier [0x7ff6530fc634+1db74]
+E       	chromedriver!GetHandleVerifier [0x7ff6530fc7e6+1dd26]
+E       	chromedriver!GetHandleVerifier [0x7ff6530e1387+28c7]
+E       	KERNEL32!BaseThreadInitThunk [0x7ff8a3e2e8d7+17]
+E       	ntdll!RtlUserThreadStart [0x7ff8a5f2c48c+2c]
+
+..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\support\wait.py:121: TimeoutException
+- Generated html report: file:///C:/Users/acer/Desktop/New%20folder%20%286%29/report.html -
+=========================== short test summary info ===========================
+FAILED test_details.py::test_makemytrip_flow - selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6530f3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff6530f30b0+145f0]
+	chromedriver!(No symbol) [0x7ff652e5db7d]
+	chromedriver!(No symbol) [0x7ff652eb73ae]
+	chromedriver!(No symbol) [0x7ff652eb76bc]
+	chromedriver!(No symbol) [0x7ff652f07a57]
+	chromedriver!(No symbol) [0x7ff652f045af]
+	chromedriver!(No symbol) [0x7ff652ea9a18]
+	chromedriver!(No symbol) [0x7ff652eaa8f3]
+	chromedriver!GetHandleVerifier [0x7ff6533fac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff6533f536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff653417d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff65310f445+30985]
+	chromedriver!GetHandleVerifier [0x7ff6531184dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff6530fc634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff6530fc7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff6530e1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff8a3e2e8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff8a5f2c48c+2c]
+============================= 1 failed in 46.90s ==============================

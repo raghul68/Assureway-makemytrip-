@@ -1,0 +1,52 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\acer\AppData\Local\Python\pythoncore-3.14-64\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.14.3', 'Platform': 'Windows-11-10.0.26200-SP0', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'html': '4.2.0', 'metadata': '3.1.1', 'xdist': '3.8.0'}}
+rootdir: C:\Users\acer\Desktop\New folder (6)
+configfile: pytest.ini
+plugins: html-4.2.0, metadata-3.1.1, xdist-3.8.0
+collecting ... collected 6 items / 5 deselected / 1 selected
+
+tests/test_basic_features.py::TestMakeMyTripBasicFeatures::test_page_load FAILED [100%]
+
+================================== FAILURES ===================================
+_________________ TestMakeMyTripBasicFeatures.test_page_load __________________
+
+self = <test_basic_features.TestMakeMyTripBasicFeatures object at 0x000002800F643890>
+driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="5c4f439c6ae71f5475aae8045b6b9917")>
+
+    def test_page_load(self, driver):
+        """
+        1. Page Load Test:
+           - Open makemytrip.com
+           - Validate page title contains 'MakeMyTrip'
+        """
+        home_page = HomePage(driver)
+>       home_page.load()
+
+tests\test_basic_features.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+pages\home_page.py:43: in load
+    self.force_close_modals() # Proactive modal closing
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <pages.home_page.HomePage object at 0x000002800F5EB0E0>
+
+    def force_close_modals(self):
+        """Attempts to close common MakeMyTrip modals if they are visible."""
+        locators = [
+>           (By.CSS_SELECTOR, ".commonModal__close"),
+             ^^
+            (By.ID, "webklipper-publisher-widget-container-notification-close-div"),
+            (By.CSS_SELECTOR, "[data-cy='closeModal']")
+        ]
+E       NameError: name 'By' is not defined
+
+pages\base_page.py:35: NameError
+-------------------------- Captured stdout teardown ---------------------------
+Screenshot saved successfully at: screenshots\test_page_load_20260320-135608.png
+- Generated html report: file:///C:/Users/acer/Desktop/New%20folder%20%286%29/report.html -
+=========================== short test summary info ===========================
+FAILED tests/test_basic_features.py::TestMakeMyTripBasicFeatures::test_page_load
+======================= 1 failed, 5 deselected in 7.25s =======================

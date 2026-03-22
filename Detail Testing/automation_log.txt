@@ -1,0 +1,195 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\acer\AppData\Local\Python\pythoncore-3.14-64\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.14.3', 'Platform': 'Windows-11-10.0.26200-SP0', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'html': '4.2.0', 'metadata': '3.1.1', 'xdist': '3.8.0'}}
+rootdir: C:\Users\acer\Desktop\New folder (6)
+configfile: pytest.ini
+plugins: html-4.2.0, metadata-3.1.1, xdist-3.8.0
+collecting ... collected 1 item
+
+test_details.py::test_mmt_automation_flow Login popup closed.
+FAILED
+
+================================== FAILURES ===================================
+__________________________ test_mmt_automation_flow ___________________________
+
+driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="c1a62c0822985725263232cea1cc7d3a")>
+
+    def test_mmt_automation_flow(driver):
+        """Refined test flow: Login-Popup -> Search -> Date Selection -> Results."""
+        page = MMTPage(driver)
+    
+        # 1. Open Site (Going directly to flights helps sometimes)
+        page.open_url("https://www.makemytrip.com/flights/")
+    
+        # 2. Close login popup
+        page.close_popup_if_exists()
+    
+        # 3. Perform city search with date selection
+        page.perform_search("BOM", "DEL")
+    
+        # 4. Success check: Wait for results and get the first flight
+        # The search result page takes time to bypass checks
+        try:
+>           card = page.get_first_result()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+test_details.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+details_page.py:75: in get_first_result
+    card = self.wait.until(EC.visibility_of_element_located(self.FIRST_FLIGHT_CARD))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="c1a62c0822985725263232cea1cc7d3a")>
+method = <function visibility_of_element_located.<locals>._predicate at 0x0000016616418670>
+message = ''
+
+    def until(self, method: Callable[[D], Literal[False] | T], message: str = "") -> T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Args:
+            method: A callable object that takes a WebDriver instance as an
+                argument.
+            message: Optional message for TimeoutException.
+    
+        Returns:
+            The result of the last call to `method`.
+    
+        Raises:
+            TimeoutException: If 'method' does not return a truthy value within
+                the WebDriverWait object's timeout.
+    
+        Example:
+            >>> from selenium.webdriver.common.by import By
+            >>> from selenium.webdriver.support.ui import WebDriverWait
+            >>> from selenium.webdriver.support import expected_conditions as EC
+            >>>
+            >>> # Wait until an element is visible on the page
+            >>> wait = WebDriverWait(driver, 10)
+            >>> element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+            >>> print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() > end_time:
+                break
+            time.sleep(self._poll)
+>       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message: 
+E       Stacktrace:
+E       	chromedriver!GetHandleVerifier [0x7ff684be3045+14585]
+E       	chromedriver!GetHandleVerifier [0x7ff684be30b0+145f0]
+E       	chromedriver!(No symbol) [0x7ff68494db7d]
+E       	chromedriver!(No symbol) [0x7ff6849a73ae]
+E       	chromedriver!(No symbol) [0x7ff6849a76bc]
+E       	chromedriver!(No symbol) [0x7ff6849f7a57]
+E       	chromedriver!(No symbol) [0x7ff6849f45af]
+E       	chromedriver!(No symbol) [0x7ff684999a18]
+E       	chromedriver!(No symbol) [0x7ff68499a8f3]
+E       	chromedriver!GetHandleVerifier [0x7ff684eeac5d+31c19d]
+E       	chromedriver!GetHandleVerifier [0x7ff684ee536d+3168ad]
+E       	chromedriver!GetHandleVerifier [0x7ff684f07d8a+3392ca]
+E       	chromedriver!GetHandleVerifier [0x7ff684bff445+30985]
+E       	chromedriver!GetHandleVerifier [0x7ff684c084dc+39a1c]
+E       	chromedriver!GetHandleVerifier [0x7ff684bec634+1db74]
+E       	chromedriver!GetHandleVerifier [0x7ff684bec7e6+1dd26]
+E       	chromedriver!GetHandleVerifier [0x7ff684bd1387+28c7]
+E       	KERNEL32!BaseThreadInitThunk [0x7ff8a3e2e8d7+17]
+E       	ntdll!RtlUserThreadStart [0x7ff8a5f2c48c+2c]
+
+..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\support\wait.py:121: TimeoutException
+
+During handling of the above exception, another exception occurred:
+
+driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="c1a62c0822985725263232cea1cc7d3a")>
+
+    def test_mmt_automation_flow(driver):
+        """Refined test flow: Login-Popup -> Search -> Date Selection -> Results."""
+        page = MMTPage(driver)
+    
+        # 1. Open Site (Going directly to flights helps sometimes)
+        page.open_url("https://www.makemytrip.com/flights/")
+    
+        # 2. Close login popup
+        page.close_popup_if_exists()
+    
+        # 3. Perform city search with date selection
+        page.perform_search("BOM", "DEL")
+    
+        # 4. Success check: Wait for results and get the first flight
+        # The search result page takes time to bypass checks
+        try:
+            card = page.get_first_result()
+    
+            # 5. Validation
+            v_name, v_price, name_t, price_t = page.validate_visibility(card)
+    
+            assert v_name, "Airline name should be visible"
+            assert v_price, "Price should be visible"
+    
+            print(f"\nSUCCESS: Observed flight '{name_t}' at price '{price_t}'")
+        except Exception as e:
+            # Take a screenshot to help debug anti-bot issues
+            driver.save_screenshot("failed_mmt_search.png")
+>           pytest.fail(f"Flight search sequence failed: {e}")
+E           Failed: Flight search sequence failed: Message: 
+E           Stacktrace:
+E           	chromedriver!GetHandleVerifier [0x7ff684be3045+14585]
+E           	chromedriver!GetHandleVerifier [0x7ff684be30b0+145f0]
+E           	chromedriver!(No symbol) [0x7ff68494db7d]
+E           	chromedriver!(No symbol) [0x7ff6849a73ae]
+E           	chromedriver!(No symbol) [0x7ff6849a76bc]
+E           	chromedriver!(No symbol) [0x7ff6849f7a57]
+E           	chromedriver!(No symbol) [0x7ff6849f45af]
+E           	chromedriver!(No symbol) [0x7ff684999a18]
+E           	chromedriver!(No symbol) [0x7ff68499a8f3]
+E           	chromedriver!GetHandleVerifier [0x7ff684eeac5d+31c19d]
+E           	chromedriver!GetHandleVerifier [0x7ff684ee536d+3168ad]
+E           	chromedriver!GetHandleVerifier [0x7ff684f07d8a+3392ca]
+E           	chromedriver!GetHandleVerifier [0x7ff684bff445+30985]
+E           	chromedriver!GetHandleVerifier [0x7ff684c084dc+39a1c]
+E           	chromedriver!GetHandleVerifier [0x7ff684bec634+1db74]
+E           	chromedriver!GetHandleVerifier [0x7ff684bec7e6+1dd26]
+E           	chromedriver!GetHandleVerifier [0x7ff684bd1387+28c7]
+E           	KERNEL32!BaseThreadInitThunk [0x7ff8a3e2e8d7+17]
+E           	ntdll!RtlUserThreadStart [0x7ff8a5f2c48c+2c]
+
+test_details.py:57: Failed
+- Generated html report: file:///C:/Users/acer/Desktop/New%20folder%20%286%29/report.html -
+=========================== short test summary info ===========================
+FAILED test_details.py::test_mmt_automation_flow - Failed: Flight search sequence failed: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff684be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff684be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff68494db7d]
+	chromedriver!(No symbol) [0x7ff6849a73ae]
+	chromedriver!(No symbol) [0x7ff6849a76bc]
+	chromedriver!(No symbol) [0x7ff6849f7a57]
+	chromedriver!(No symbol) [0x7ff6849f45af]
+	chromedriver!(No symbol) [0x7ff684999a18]
+	chromedriver!(No symbol) [0x7ff68499a8f3]
+	chromedriver!GetHandleVerifier [0x7ff684eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff684ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff684f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff684bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff684c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff684bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff684bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff684bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff8a3e2e8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff8a5f2c48c+2c]
+============================= 1 failed in 43.27s ==============================
